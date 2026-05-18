@@ -50,13 +50,13 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-wrap gap-5">
-              <button className="h-16 px-10 bg-white text-black font-black rounded-2xl flex items-center gap-3 hover:bg-orange-500 hover:text-white transition-all duration-300 group">
+              <a href='https://x.com/RafaelTade522' target='_blank' className="h-16 px-10 bg-white text-black font-black rounded-2xl flex items-center gap-3 hover:bg-orange-500 hover:text-white transition-all duration-300 group">
                 EXPLORE SHIPMENTS <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="h-16 px-8 bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl font-bold flex items-center gap-3 hover:bg-white/10 transition-all">
+              </a>
+              <a href='https://www.youtube.com/@rafaeltadesse' target='_blank' className="h-16 px-8 bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl font-bold flex items-center gap-3 hover:bg-white/10 transition-all">
                 <Play size={18} fill="white" />
                 <span className="text-sm tracking-wide uppercase">Watch The Build</span>
-              </button>
+              </a>
             </div>
           </div>
 
@@ -82,7 +82,7 @@ export default function Hero() {
                    <div className="flex items-center justify-between">
                       <div>
                          <p className="text-[10px] font-mono text-orange-500 tracking-[0.2em] mb-1 uppercase">Current Status</p>
-                         <h4 className="font-bold text-lg">Building Orcha.</h4>
+                         <h4 className="font-bold text-lg">Building Lumi</h4>
                       </div>
                       <Award className="text-orange-500" size={24} />
                    </div>
