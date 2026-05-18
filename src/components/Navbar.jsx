@@ -31,7 +31,7 @@ export default function Navbar() {
   }, []);
 
   const handleContact = () => {
-    const email = "rafaeltadesse.et@gmail.com";
+    const email = "hello@rafaeltadesse.dev";
     const subject = encodeURIComponent("Project Inquiry: Your title");
     const body = encodeURIComponent("Hi Rafael,\n\nI saw your portfolio and I'm interested in discussing...");
     
