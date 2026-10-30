@@ -1,20 +1,13 @@
 import { motion } from 'framer-motion';
-import { Play, Camera, BookOpen, Quote, Youtube, ExternalLink } from 'lucide-react';
+import { Camera, BookOpen, Quote } from 'lucide-react';
 
 const journeyItems = [
-  {
-    type: 'video',
-    title: 'Building A Startup | Podcast',
-    description: 'Documenting the moment I moved from record-keeping to goal-hitting.',
-    videoId: 'inRo9SavzXQ', // Your YouTube ID
-    span: 'md:col-span-2 md:row-span-2',
-  },
   {
     type: 'photo',
     title: 'Pitching For Government Officials',
     description: 'Presenting the solution I had for queue issues in government sectors',
     image: '/nifas.jpg',
-    span: 'md:col-span-1 md:row-span-1',
+    span: 'md:col-span-1 md:row-span-2',
   },
   {
     type: 'story',
@@ -28,14 +21,7 @@ const journeyItems = [
     title: 'Second Strategic Partnership',
     description: 'The moment for the second partnership signing for Interestly',
     image: '/jasper.png', 
-    span: 'md:col-span-1 md:row-span-1',
-  },
-  {
-    type: 'video',
-    title: 'Testing My Startup',
-    description: 'Stress Testing Interestly 10 days before launch',
-    videoId: '88CYRzv8aT4',
-    span: 'md:col-span-1 md:row-span-1',
+    span: 'md:col-span-1 md:row-span-2',
   }
 ];
 
@@ -62,27 +48,6 @@ export default function JourneyGallery() {
               transition={{ delay: i * 0.1 }}
               className={`${item.span} group relative rounded-[32px] overflow-hidden border border-white/5 bg-[#0a0a0a]`}
             >
-              {/* VIDEO CARD */}
-              {item.type === 'video' && (
-                <div className="relative h-full w-full">
-                  <iframe
-                    className="absolute inset-0 w-full h-full transition-all duration-700"
-                    src={`https://www.youtube.com/embed/${item.videoId}?modestbranding=1&rel=0`}
-                    title={item.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none p-8 flex flex-col justify-end">
-                    <div className="flex items-center gap-2 mb-2">
-                       <Youtube size={16} className="text-red-500" />
-                       <span className="text-[10px] font-mono text-white/50 tracking-widest uppercase">Video Log</span>
-                    </div>
-                    <h3 className="text-xl font-bold">{item.title}</h3>
-                  </div>
-                </div>
-              )}
-
               {/* PHOTO CARD */}
               {item.type === 'photo' && (
                 <div className="relative h-full w-full">

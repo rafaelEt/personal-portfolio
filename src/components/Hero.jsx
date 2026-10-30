@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Play, ArrowRight, Youtube, Linkedin, Github, Award } from 'lucide-react';
+import { ArrowRight, Linkedin, Award } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -21,41 +21,37 @@ export default function Hero() {
           {/* LEFT CONTENT: The Narrative */}
           <div className="lg:col-span-7 space-y-10">
             <div className="space-y-6">
-              <div className="flex items-center gap-4">
+              <div className="flex flex-wrap items-center gap-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/20 bg-orange-500/5 text-[10px] font-mono tracking-[0.2em] text-orange-500">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
                   </span>
-                  BUILDING IN PUBLIC
+                  SOLO FOUNDER · ADDIS ABABA
                 </div>
                 <div className="h-[1px] w-12 bg-white/10" />
                 <div className="flex gap-4 text-gray-500">
-                  <a href="https://www.youtube.com/@rafaeltadesse" target='_blank' className="hover:text-white transition-colors"><Youtube size={18} /></a>
                   <a href="https://www.linkedin.com/in/rafael-tadesse-96274330b/" target='_blank' className="hover:text-white transition-colors"><Linkedin size={18} /></a>
                 </div>
               </div>
 
-              <h1 className="text-6xl md:text-[110px] font-black tracking-[-0.05em] leading-[0.85] italic">
-                SHIPPING <br />
+              <h1 className="text-4xl sm:text-5xl md:text-[80px] font-black tracking-[-0.05em] leading-[0.85] italic">
+                SOLO FOUNDER. <br />
+                8 PRODUCTS. <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/20">
-                  RAW VALUE.
+                  4,000+ USERS.
                 </span>
               </h1>
               
               <p className="text-xl md:text-xl text-gray-400 font-light leading-snug max-w-xl">
-  I’m a <span className="text-white font-medium italic">technical founder</span> building products from scratch - architecting systems, shipping MVPs fast, and turning ideas into real businesses.
+  <span className="text-white font-medium italic">5 live today</span>, used by chess players, radio listeners, and government offices. I design, code, and ship every one myself, then get on calls with the people using it to decide what to build next.
 </p>
 
             </div>
 
             <div className="flex flex-wrap gap-5">
-              <a href='https://x.com/RafaelTade522' target='_blank' className="h-16 px-10 bg-white text-black font-black rounded-2xl flex items-center gap-3 hover:bg-orange-500 hover:text-white transition-all duration-300 group">
+              <a href='#products' className="h-16 px-10 bg-white text-black font-black rounded-2xl flex items-center gap-3 hover:bg-orange-500 hover:text-white transition-all duration-300 group">
                 EXPLORE SHIPMENTS <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a href='https://www.youtube.com/@rafaeltadesse' target='_blank' className="h-16 px-8 bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl font-bold flex items-center gap-3 hover:bg-white/10 transition-all">
-                <Play size={18} fill="white" />
-                <span className="text-sm tracking-wide uppercase">Watch The Build</span>
               </a>
             </div>
           </div>
@@ -82,10 +78,13 @@ export default function Hero() {
                    <div className="flex items-center justify-between">
                       <div>
                          <p className="text-[10px] font-mono text-orange-500 tracking-[0.2em] mb-1 uppercase">Current Status</p>
-                         <h4 className="font-bold text-lg">Building Lumi</h4>
+                         <h4 className="font-bold text-lg">Building Orcha</h4>
                       </div>
                       <Award className="text-orange-500" size={24} />
                    </div>
+                   <p className="text-xs text-gray-400 font-light leading-snug mt-3 pt-3 border-t border-white/10">
+                     An AI meeting orchestrator, in its early stage.
+                   </p>
                 </div>
               </div>
 

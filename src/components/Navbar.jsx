@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Youtube, Linkedin, Github, Send, Mail, Twitter } from 'lucide-react';
+import { Menu, X, Linkedin, Github, Send } from 'lucide-react';
 
 const XIcon = ({ size = 18, className = "" }) => (
   <svg 
@@ -70,21 +70,20 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-10">
           <nav className="flex gap-8 text-[11px] font-bold tracking-[0.15em] text-gray-400">
-            {['ROLES', 'GALLERY'].map((item) => (
+            {[{ label: 'PRODUCTS', href: '#products' }, { label: 'BUILD LOG', href: '#build-log' }].map((item) => (
               <a 
-                key={item}
-                href={`#${item.toLowerCase().replace(' ', '')}`} 
-                onClick={(e) => scrollToSection(e, item.toLowerCase().replace(' ', ''))}
+                key={item.label}
+                href={item.href}
                 className="hover:text-white transition-colors relative group"
               >
-                {item}
+                {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-orange-500 transition-all group-hover:w-full" />
               </a>
             ))}
           </nav>
           
           <button onClick={handleContact} className="relative group overflow-hidden px-5 py-2 bg-white text-black text-xs font-black rounded-lg transition-all hover:pr-8">
-            <span className="relative z-10">GET IN TOUCH</span>
+            <span className="relative z-10">TALK TO ME</span>
             <div className="absolute right-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all">
                →
             </div>
@@ -110,11 +109,11 @@ export default function Navbar() {
             className="md:hidden mt-2 mx-auto max-w-7xl overflow-hidden backdrop-blur-2xl bg-black/90 border border-white/10 rounded-2xl"
           >
             <div className="flex flex-col p-8 gap-6 font-bold tracking-tighter text-2xl">
-              <a href="#roles" onClick={() => {scrollToSection(e, 'roles'); setMobileMenuOpen(!mobileMenuOpen)}}>ROLES</a>
-              <a href="#gallery" onClick={() => {scrollToSection(e, 'gallery'); setMobileMenuOpen(!mobileMenuOpen)}}>GALLERY</a>
+              <a href="#products" onClick={() => setMobileMenuOpen(false)}>PRODUCTS</a>
+              <a href="#build-log" onClick={() => setMobileMenuOpen(false)}>BUILD LOG</a>
               <hr className="border-white/5" />
               <div className="flex gap-6 text-gray-400">
-                 <Youtube /> <Linkedin /> <Github />
+                 <Linkedin /> <Github />
               </div>
             </div>
           </motion.div>

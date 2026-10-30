@@ -1,136 +1,7 @@
 import { motion } from 'framer-motion';
-import { ArrowUpRight, CheckCircle2, Users } from 'lucide-react';
-
-const projects = [
-  {
-    title: "Duelo",
-    type: "REAL-TIME PLATFORM",
-    description: "Real-time multiplayer chess platform with integrated video chat.",
-    image: "/screenshots/duelo.png", // Replace with your screenshot path
-    contributions: [
-      "Built synchronized multiplayer chess gameplay",
-      "Integrated peer-to-peer WebRTC video calls",
-      "Engineered low-latency room and match handling"
-    ],
-    metrics: "Live Multiplayer Gameplay",
-    tech: ["React", "WebRTC", "Supabase"],
-    link: "https://duelo.rafaeltadesse.dev",
-    status: "Live",
-    span: "md:col-span-1"
-  },
-  {
-    title: "Rafael's Relay",
-    type: "COMMUNICATION PLATFORM",
-    description: "Personal branded meeting platform for video calls and networking.",
-    image: "/screenshots/relay.jpg",
-    contributions: [
-      "Built real-time video/audio meeting system",
-      "Implemented screen sharing and live chat",
-      "Designed branded meeting workflow with timer"
-    ],
-    metrics: "Built & Deployed in 1 Day",
-    tech: ["React", "WebRTC", "Supabase"],
-    link: "https://meet.rafaeltadesse.dev",
-    status: "Live",
-    span: "md:col-span-1"
-  },
-  {
-    title: "Habesha Radio",
-    type: "MEDIA PLATFORM",
-    description: "Web platform for streaming Ethiopian radio stations online.",
-    image: "/screenshots/fm.png",
-    contributions: [
-      "Built streaming-focused frontend experience",
-      "Integrated multiple live radio streams",
-      "Optimized lightweight responsive playback UI"
-    ],
-    metrics: "Multi-Station Streaming",
-    tech: ["React", "Streaming APIs"],
-    link: "https://www.lumi.et/profile/Habesha%20Radio",
-    status: "Live",
-    span: "md:col-span-1"
-  },
-  {
-    title: "Lumi",
-    type: "TECH COMPANY",
-    description: "Technology company focused on building digital products, SaaS tools, and scalable infrastructure.",
-    image: "/screenshots/lumi.jpg",
-    contributions: [
-      "Founded and leading product direction",
-      "Built internal platforms and scalable systems",
-      "Managing branding, deployment, and operations"
-    ],
-    metrics: "Multiple Products Under Ecosystem",
-    tech: ["React", "Node.js", "Docker", "Supabase"],
-    link: "https://lumi.et",
-    status: "Live",
-    span: "md:col-span-2"
-  },
-  {
-    title: "Orcha",
-    type: "SAAS / PRODUCT",
-    description: "Meeting engine focused on goal-attainment. Built to solve the 'record quality vs goal hits' trade-off.",
-    image: "/screenshots/orcha.jpeg",
-    contributions: [
-      "Engineered real-time goal tracking via WebRTC",
-      "Architected automated outcome extraction",
-      "Designed 'goal-first' UX for meeting focus"
-    ],
-    metrics: "300+ Waiting Users",
-    tech: ["React", "WebRTC", "Supabase"],
-    link: "https://join-orcha.vercel.app/waitlist",
-    status: "Launching Soon",
-    span: "md:col-span-1"
-  },
-  {
-    title: "Linklok",
-    type: "SAAS / PRODUCT",
-    description: "Transforming standard links into dynamic growth and tracking tools.",
-    image: "/screenshots/lok.jpg",
-    contributions: [
-      "Built custom URL shortening engine",
-      "Implemented real-time analytics with Redis",
-      "Scaled Nginx config for high-traffic redirects"
-    ],
-    metrics: "1k+ Users",
-    tech: ["Node.JS", "Redis", "Nginx"],
-    link: "https://youtu.be/pU6r2ZsFVfg",
-    status: "Down",
-    span: "md:col-span-1"
-  },
-  {
-    title: "Werefa",
-    type: "INFRASTRUCTURE",
-    description: "Queue management software for government services.",
-    image: "/screenshots/werefa.jpg",
-    contributions: [
-      "Digitized manual gov queue systems",
-      "Built high-availability MongoDB schema",
-      "Deployed via Docker for local server stability"
-    ],
-    metrics: "99.9% Uptime",
-    tech: ["Node.js", "Docker", "MongoDB"],
-    link: "https://www.linkedin.com/posts/rafael-tadesse-96274330b_telebirr-ethiopia-entrepreneurship-activity-7394026509990166528-YmC2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE70IZoB5m26yvj9MyYZBiCtU5PiMSHOy4A",
-    status: "Live",
-    span: "md:col-span-2"
-  },
-  {
-    title: "Interestly",
-    type: "SAAS / SOCIAL",
-    description: "Random video chat for professionals with shared interests.",
-    image: "/screenshots/inter.jpg",
-    contributions: [
-      "Implemented interest-matching algorithm",
-      "Optimized Socket.IO for low-latency pairing",
-      "Integrated secure WebRTC peer connections"
-    ],
-    metrics: "3k+ Users",
-    tech: ["React", "WebRTC", "Socket.IO", "Node.JS"],
-    link: "https://youtu.be/PNBPV5HULHY?list=PL2x_Kjr88gJOBpevuJif0PGCjxYyrVMAn",
-    status: "Down",
-    span: "md:col-span-3"
-  },
-];
+import { ArrowUpRight } from 'lucide-react';
+import { projects } from '../data/projects';
+import { projectPath } from '../router';
 
 export default function ProjectShowcase() {
   return (
@@ -144,11 +15,18 @@ export default function ProjectShowcase() {
               SELECTED <br/> <span className="text-orange-500">SHIPMENTS.</span>
             </h2>
             <p className="text-gray-500 font-mono text-xs tracking-widest uppercase">
-              Founding, Engineering & Architecting Value
+              Products I built solo, with real users
             </p>
           </div>
-          <div className="text-right">
-             <span className="text-6xl font-black text-white/5 font-mono select-none">05+</span>
+          <div className="text-right flex justify-end gap-8 md:gap-10">
+             <div>
+               <p className="text-4xl md:text-5xl font-black font-mono text-white leading-none">08</p>
+               <p className="text-[10px] font-mono text-gray-600 tracking-[0.2em] uppercase mt-2">Products Built</p>
+             </div>
+             <div>
+               <p className="text-4xl md:text-5xl font-black font-mono text-orange-500 leading-none">4,000+</p>
+               <p className="text-[10px] font-mono text-gray-600 tracking-[0.2em] uppercase mt-2">Users Reached</p>
+             </div>
           </div>
         </div>
 
@@ -160,9 +38,7 @@ export default function ProjectShowcase() {
             return (
               <motion.a
                 key={i}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={projectPath(project.slug)}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -197,25 +73,20 @@ export default function ProjectShowcase() {
                         {project.description}
                       </p>
 
-                      {/* Contribution List */}
-                      <div className="space-y-3 mt-6 border-l-2 border-orange-500/10 pl-4 py-1">
-                        <p className="text-[10px] font-mono text-gray-600 uppercase tracking-widest mb-2">Key Contributions</p>
-                        {project.contributions.map((contribution, idx) => (
-                          <div key={idx} className="flex items-center gap-2">
-                            <CheckCircle2 size={12} className="text-orange-500/50" />
-                            <p className="text-xs text-gray-400 font-light line-clamp-1">{contribution}</p>
-                          </div>
-                        ))}
+                      {/* Why It Exists */}
+                      <div className="mt-6 border-l-2 border-orange-500/10 pl-4 py-1">
+                        <p className="text-[10px] font-mono text-gray-600 uppercase tracking-widest mb-2">The Problem</p>
+                        <p className="text-xs text-gray-400 font-light leading-relaxed line-clamp-3">{project.problem}</p>
                       </div>
                     </div>
 
                     {/* Footer Stats */}
-                    <div className="mt-auto pt-6 border-t border-white/5 flex flex-wrap items-center justify-between gap-4">
-                      <div className="flex items-center gap-2">
-                        <Users size={14} className="text-gray-600" />
-                        <span className="text-xs font-bold font-mono text-gray-400">{project.metrics}</span>
+                    <div className="mt-auto pt-6 border-t border-white/5 mb-3 space-y-4">
+                      <div>
+                        <p className="text-[10px] font-mono text-gray-600 uppercase tracking-widest mb-1">The Result</p>
+                        <p className="text-sm font-bold font-mono text-orange-500">{project.metrics}</p>
                       </div>
-                      <div className="flex gap-2">
+                      <div className="flex flex-wrap gap-2">
                         {project.tech.map(t => (
                           <span key={t} className="text-[9px] font-mono text-gray-400 bg-white/5 px-2 py-0.5 rounded border border-white/5 group-hover:border-orange-500/20 transition-colors">
                             {t}
