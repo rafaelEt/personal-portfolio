@@ -60,7 +60,7 @@ export const moments = [
     description:
       'A walkthrough of the platform that grew to thousands of users.',
     image: '/screenshots/guest.jpg',
-    link: 'https://youtu.be/PNBPV5HULHY',
+    link: 'https://youtu.be/uplEcvbheZw',
   },
   {
     type: 'PARTNERSHIP',
@@ -75,7 +75,7 @@ export const moments = [
     description:
       'Entrepreneurship and its path',
     image: '/screenshots/pod.jpg',
-    link: 'https://youtu.be/PNBPV5HULHY',
+    link: 'https://youtu.be/9cRoPq9Aro4',
   },
 ];
 
